@@ -1,0 +1,15 @@
+diff --git a/configs/rock-5b-rk3588_defconfig b/configs/rock-5b-rk3588_defconfig
+index 987d9298f5..9975255344 100644
+--- a/configs/rock-5b-rk3588_defconfig
++++ b/configs/rock-5b-rk3588_defconfig
+@@ -31,8 +31,8 @@ CONFIG_SPL_FIT_IMAGE_POST_PROCESS=y
+ CONFIG_SPL_FIT_HW_CRYPTO=y
+ # CONFIG_SPL_SYS_DCACHE_OFF is not set
+ CONFIG_BOOTDELAY=0
+-CONFIG_DISABLE_CONSOLE=y
+-CONFIG_SYS_CONSOLE_INFO_QUIET=y
++# CONFIG_DISABLE_CONSOLE is not set
++# CONFIG_SYS_CONSOLE_INFO_QUIET is not set
+ # CONFIG_DISPLAY_CPUINFO is not set
+ CONFIG_ANDROID_BOOTLOADER=y
+ CONFIG_ANDROID_AVB=y

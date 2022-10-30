@@ -1,0 +1,13 @@
+diff --git a/include/configs/rockchip-common.h b/include/configs/rockchip-common.h
+index 57800b371d..f073acf64d 100644
+--- a/include/configs/rockchip-common.h
++++ b/include/configs/rockchip-common.h
+@@ -117,7 +117,7 @@
+ 
+ 
+ #ifdef CONFIG_ARM64
+-#define FDTFILE "rockchip/" CONFIG_DEFAULT_DEVICE_TREE ".dtb" "\0"
++#define FDTFILE CONFIG_DEFAULT_DEVICE_TREE ".dtb" "\0"
+ #else
+ #define FDTFILE CONFIG_DEFAULT_DEVICE_TREE ".dtb" "\0"
+ #endif
