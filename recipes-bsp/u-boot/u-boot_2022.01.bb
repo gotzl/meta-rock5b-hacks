@@ -32,9 +32,13 @@ do_compile:append() {
         cp -rT ${S}/${d} ${d}
     done
 
-    oe_runmake -C ${S} O=${B}/${config} BL31=${B}/../rkbin/bin/rk35/rk3588_bl31_v1.28.elf \
+    oe_runmake -C ${S} O=${B}/${config} BL31=${B}/../rkbin/bin/rk35/${BOOT_LOADER} \
         spl/u-boot-spl.bin u-boot.dtb u-boot.itb
-    ${B}/tools/mkimage -n rk3588 -T rksd -d ${B}/../rkbin/bin/rk35/rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.08.bin:spl/u-boot-spl.bin idbloader.img
+    ${B}/tools/mkimage -n rk3588 -T rksd -d ${B}/../rkbin/bin/rk35/${SPL_FILE}:spl/u-boot-spl.bin idbloader.img
+}
+
+do_deploy:append() {
+	install ${B}/../rkbin/bin/rk35/${SPL_LOADER} ${DEPLOYDIR}/${SPL_LOADER}
 }
 
 DEPENDS += "bc-native dtc-native python3-setuptools-native coreutils-native"

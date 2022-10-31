@@ -19,8 +19,9 @@ KBUILD_DEFCONFIG ?= "rockchip_linux_defconfig"
 KERNEL_CLASSES = "kernel-fitimage"
 KERNEL_IMAGETYPE = "fitImage"
 
-TFA_PLATFORM = "rk3588"
-TFA_BUILD_TARGET = "bl31"
+BOOT_LOADER ?= "rk3588_bl31_v1.28.elf"
+SPL_FILE ?= "rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.08.bin"
+SPL_LOADER ?= "rk3588_spl_loader_v1.08.111.bin"
 
 SERIAL_CONSOLES = "115200;ttyFIQ0"
 

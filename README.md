@@ -35,13 +35,12 @@ of u-boot seems to be unamble to load fitImage, some modifications are made to g
 ### III. Booting your device
 Short version of official instructions [here](https://wiki.radxa.com/Rock5/install/usb-install-emmc).
 
-Get the [RK3588 loader](https://dl.radxa.com/rock5/sw/images/loader/rock-5b/rk3588_spl_loader_v1.08.111.bin) and [rkdeveloptool](https://github.com/radxa/rkdeveloptool.git).
-
+Get the [rkdeveloptool](https://github.com/radxa/rkdeveloptool.git).
 
 Power the device while pressing the button next to the fan pins. Then
 ```
 rkdeveloptool ld
-rkdeveloptool db /path/to/rk3588_spl_loader_v1.08.111.bin
+rkdeveloptool db latest/rk3588_spl_loader_v1.08.111.bin
 rkdeveloptool wl 0 /path/to/image.wic
 rkdeveloptool rd
 ```
