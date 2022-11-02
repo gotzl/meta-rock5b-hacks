@@ -25,5 +25,10 @@ SPL_LOADER ?= "rk3588_spl_loader_v1.08.111.bin"
 
 SERIAL_CONSOLES = "115200;ttyFIQ0"
 
+# Docker optimizations
+APPEND += "cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1"
+# For RK3588
+APPEND += "irqchip.gicv3_pseudo_nmi=0 switolb=1 coherent_pool=2M"
+
 UBOOT_SUFFIX ?= "itb"
 UBOOT_ENTRYPOINT ?= "0x06000000"
