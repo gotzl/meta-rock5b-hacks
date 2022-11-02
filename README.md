@@ -12,9 +12,9 @@ This layer depends on:
 
 ## Table of Contents
 
-  I. Configure yocto/oe environment
- II. Changes for the Rock5b implemented in this layer
- III. Booting your device
+  I. Configure yocto/oe environment    
+ II. Changes for the Rock5b implemented in this layer    
+ III. Booting your device    
 
 ### I. Configure yocto/oe environment
 This layer adds support for the Radxa Rock5b, which is not fully supported by
@@ -33,11 +33,9 @@ First, this layer uses the linux-rockchip kernel fork of radxa as well as their 
 of u-boot seems to be unamble to load fitImage, some modifications are made to get plain Image and .dtb on the boot partition.
 
 ### III. Booting your device
-Short version of official instructions [here](https://wiki.radxa.com/Rock5/install/usb-install-emmc).
+Short version of [official instructions](https://wiki.radxa.com/Rock5/install/usb-install-emmc).
 
-Get the [rkdeveloptool](https://github.com/radxa/rkdeveloptool.git).
-
-Power the device while pressing the button next to the fan pins. Then
+Get the [rkdeveloptool](https://github.com/radxa/rkdeveloptool.git). Power the device while pressing the button next to the fan pins. Then
 ```
 rkdeveloptool ld
 rkdeveloptool db latest/rk3588_spl_loader_v1.08.111.bin
