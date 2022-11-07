@@ -7,7 +7,7 @@ The layer targets the [Radxa Rock5b board](https://wiki.radxa.com/Rock5/5b).
 
 This layer depends on:
 
-[meta-rockchip](git://git.yoctoproject.org/meta-rockchip)
+[meta-rockchip](https://git.yoctoproject.org/meta-rockchip) (the git.yoctoproject.org one)
 * branch: kirkstone
 
 ## Table of Contents
