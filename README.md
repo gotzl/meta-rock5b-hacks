@@ -3,11 +3,13 @@
 This README file contains information on the contents of the meta-rock5b-hacks layer.
 The layer targets the [Radxa Rock5b board](https://wiki.radxa.com/Rock5/5b).
 
+Note: The [Radxa meta-rockchip layer](https://github.com/radxa/meta-rockchip) has support for the Rock5b as well. In contrast to the Radxa layer, this layer only depends on the [meta-rockchip](https://git.yoctoproject.org/meta-rockchip) layer maintained by `git.yoctoproject.org` (see also `Dependencies`).
+
 ## Dependencies
 
 This layer depends on:
 
-[meta-rockchip](https://git.yoctoproject.org/meta-rockchip) (the git.yoctoproject.org one)
+[meta-rockchip](https://git.yoctoproject.org/meta-rockchip)
 * branch: kirkstone
 
 ## Table of Contents
