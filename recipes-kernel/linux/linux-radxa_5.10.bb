@@ -1,10 +1,10 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
-KBRANCH ?= "stable-5.10-rock5"
+KBRANCH ?= "linux-5.10-gen-rkr3.4"
 
 require recipes-kernel/linux/linux-yocto.inc
 
-SRCREV = "7917720a4d4dc4f1e37feaa16698773ce8f2d230"
-SRCREV_machine ?= "7917720a4d4dc4f1e37feaa16698773ce8f2d230"
+SRCREV = "ca15bbe36e6c087c96a603db7cc491a01d9a6467"
+SRCREV_machine ?= "ca15bbe36e6c087c96a603db7cc491a01d9a6467"
 SRCREV_meta ?= "96ea2660bb97e15f48f4885b9e436f24c3606bd9"
 
 SRC_URI = " \
@@ -14,7 +14,7 @@ SRC_URI = " \
 	file://docker-optional.cfg \
 "
 LIC_FILES_CHKSUM = "file://COPYING;md5=6bc538ed5bd9a7fc9398086aedcd7e46"
-LINUX_VERSION = "5.10.66"
+LINUX_VERSION = "5.10.110"
 
 EPENDS += "${@bb.utils.contains('ARCH', 'x86', 'elfutils-native', '', d)}"
 DEPENDS += "openssl-native util-linux-native"

@@ -3,7 +3,7 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 require recipes-bsp/u-boot/u-boot-common.inc
 require recipes-bsp/u-boot/u-boot.inc
 
-SRCREV = "49da44e116d1f68f0ce187d551a7b5b9d1571768"
+SRCREV = "75b12f8295f1216d8f871a23fca37d4c990d508d"
 SRCREV_rkbin = "9840e87723eef7c41235b89af8c049c1bcd3d133"
 SRC_URI = " \
     git://github.com/radxa/u-boot.git;protocol=https;branch=stable-5.10-rock5; \
