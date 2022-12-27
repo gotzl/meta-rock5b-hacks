@@ -3,8 +3,8 @@ KBRANCH ?= "linux-5.10-gen-rkr3.4"
 
 require recipes-kernel/linux/linux-yocto.inc
 
-SRCREV = "ca15bbe36e6c087c96a603db7cc491a01d9a6467"
-SRCREV_machine ?= "ca15bbe36e6c087c96a603db7cc491a01d9a6467"
+SRCREV = "b62cf4be15ea8a8fd2dc980ae39c36dc42f2f065"
+SRCREV_machine ?= "b62cf4be15ea8a8fd2dc980ae39c36dc42f2f065"
 SRCREV_meta ?= "96ea2660bb97e15f48f4885b9e436f24c3606bd9"
 
 SRC_URI = " \
@@ -41,7 +41,9 @@ KERNEL_IMAGETYPES:append = " Image"
 do_compile_kernelmodules:prepend() {
 	# FIXME: hack to get rkwifi modules build with buildroot separated from srcroot
 	sed -i -e 's, \$(src), '${S}'/\$(src),g' \
-	       -e 's, -I\$(src), -I'${S}'/\$(src),g' \
+	       -e 's,-I\$(src),-I'${S}'/\$(src),g' \
+		${S}/drivers/net/wireless/broadcom/brcm80211/brcmutil/Makefile \
+		${S}/drivers/net/wireless/broadcom/brcm80211/brcmfmac/Makefile \
 		${S}/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/Makefile \
 		${S}/drivers/net/wireless/rockchip_wlan/rtl8852be/Makefile \
 		${S}/drivers/net/wireless/rockchip_wlan/rtl8852be/common.mk \
