@@ -3,8 +3,8 @@ KBRANCH ?= "linux-5.10-gen-rkr3.4"
 
 require recipes-kernel/linux/linux-yocto.inc
 
-SRCREV = "b62cf4be15ea8a8fd2dc980ae39c36dc42f2f065"
-SRCREV_machine ?= "b62cf4be15ea8a8fd2dc980ae39c36dc42f2f065"
+SRCREV = "af142b6e9863dcec8ba63ce4c62f2d5a0624f1ad"
+SRCREV_machine ?= "af142b6e9863dcec8ba63ce4c62f2d5a0624f1ad"
 SRCREV_meta ?= "96ea2660bb97e15f48f4885b9e436f24c3606bd9"
 
 SRC_URI = " \
